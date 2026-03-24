@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(white 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 460px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 35px 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 26px; font-weight: 600; }
+        .form-container { padding: 40px; }
+        .form-group { margin-bottom: 20px; }
+        label { display:block; margin-bottom: 8px; font-weight:500; color:#374151; }
+        input, select {
+            width:100%; padding:14px 16px; border:2px solid #e5e7eb; border-radius:10px;
+            font-size:16px;
+        }
+        input:focus, select:focus { 
+            border-color:#4f46e5; 
+            box-shadow:0 0 0 4px rgba(16,185,129,0.1); 
+            outline:none; 
+        }
+        .btn {
+            width:100%; padding:16px; border:none; border-radius:10px; 
+            font-size:17px; font-weight:600; cursor:pointer; margin-top:10px;
+            background:#4f46e5; color:white;
+        }
+        .btn:hover { background:#4f46e5; }
+        .btn-back {
+            background:#f1f5f9; color:#64748b; margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Completa tu Registro</h1>
+        </div>
+        <div class="form-container">
+            <form id="registroForm">
+                <div class="form-group">
+                    <label>Nombres</label>
+                    <input type="text" id="nombres" required>
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input type="text" id="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label>Cédula</label>
+                    <input type="text" id="cedula" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date" id="fechaNacimiento" required>
+                </div>
+
+                <button type="submit" class="btn">Guardar Registro</button>
+                <button type="button" class="btn btn-back" onclick="volverAlLogin()">Volver al Inicio</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulación de guardado
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = 'Guardando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert("✅ Registro guardado correctamente.");
+                window.location.href = "errores.html";   // Va a la pantalla de errores
+            }, 1400);
+        });
+
+        function volverAlLogin() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

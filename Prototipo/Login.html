@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(white 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 35px 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 28px; font-weight: 600; }
+        .form-container { padding: 40px; }
+        .form-group { margin-bottom: 22px; }
+        label { display:block; margin-bottom: 8px; font-weight:500; color:#374151; }
+        input {
+            width:100%; padding:14px 16px; border:2px solid #e5e7eb; border-radius:10px;
+            font-size:16px; transition:all 0.3s;
+        }
+        input:focus { border-color:#4f46e5; box-shadow:0 0 0 4px rgba(79,70,229,0.1); outline:none; }
+        .btn {
+            width:100%; padding:16px; border:none; border-radius:10px; font-size:17px;
+            font-weight:600; cursor:pointer; margin-top:10px;
+        }
+        .btn-login { background:#4f46e5; color:white; }
+        .btn-login:hover { background:#4338ca; }
+        .recuperar { display:block; text-align:center; margin-top:15px; color:#6b7280; text-decoration:none; }
+        .recuperar:hover { color:#4f46e5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 Iniciar Sesión</h1>
+        </div>
+        <div class="form-container">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-login" id="btnLogin">Ingresar</button>
+                <a href="#" class="recuperar" onclick="recuperarPass(event)">¿Olvidaste tu contraseña?</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnLogin');
+            btn.innerHTML = 'Validando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Simulación de login exitoso → redirige a registro
+                window.location.href = "registro.html";
+            }, 1500);
+        });
+
+        function recuperarPass(e) {
+            e.preventDefault();
+            alert("Se enviaría un enlace de recuperación al correo ingresado.");
+        }
+    </script>
+</body>
+</html>
