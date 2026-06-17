@@ -2,9 +2,9 @@
 #### *Mi nombre es Jhon Zapata*
 ![](https://github.com/Jhonzapata26/Aprendiendo-python/blob/master/artificial-intelligence.jpg)
 
-*Soy aprendiz en programación y desarrollo, llevo relativamente poco en este mundo, actualmente estoy cursando primer semestre de ingenieria de software y espero poder desarrollar grandes habilidades que me permitan destacarme en este campo y asi poder abrir muchas puertas a cosas muy grandes.*
+*Soy aprendiz en analisis y desarrollo de software, actualmente estoy cursando una tecnologia en el sena, me involucre en este mundo gracias a que siempre me ha gustado lo que tenga que ver con tecnología y sobretodo la programación, desarrollo de aplicaciones web y movil, y la inteligencia artificial*
 
-**Habilidades:** *html/css/python/java*
+**Habilidades:** *html/css/python/java,javascript*
 .*
 - 🌱 *Estoy aprendiendo phyton, java, html, css cada una en el nivel basico aspiro pronto poder tener mas dominio de cada una. Los codigos que encontraras son ejercicios de practica que ire desarrollando de acuerdo a los conocimientos que vaya adquiriendo*
 - 📫 Cómo contactarme:
